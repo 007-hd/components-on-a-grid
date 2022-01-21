@@ -48,7 +48,7 @@ nav ul {
 }
 
 nav li {
-  padding: 1rem;
+  padding-right: 1rem;
 }
 
 nav a {
@@ -83,4 +83,10 @@ img {
 h2 {
   margin: 0;
   font-family: "Patua One", sans-serif;
+  color: #30658d;
+  padding-top: 1rem;
+}
+
+p {
+  margin: 0;
 }
