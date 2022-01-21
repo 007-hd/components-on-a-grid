@@ -8,6 +8,13 @@ html {
   box-sizing: inherit;
 }
 
+body: {
+  display: grid;
+  grid-template-areas:
+  "header  header"
+  "figure  figure";
+}
+
 img {
   width: 100%;
 }
