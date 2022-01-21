@@ -1,5 +1,8 @@
 html {
   box-sizing: border-box;
+  font-family: Georgia, serif;
+  line-height: 1.5;
+  background-color: #f2f1ed;
 }
 
 *,
@@ -7,14 +10,15 @@ html {
 *::after {
   box-sizing: inherit;
 }
-body {
-  background-color: #f2f1ed;
-  display: grid;
-  grid-template-areas:
-  "header  header"
-  "figure  figure";
-}
 
+body {
+  margin: 0;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "header  header" "figure1  figure2";
+  grid-template-columns: 1fr 1fr;
+}
 
 .pano {
   grid-area: header;
@@ -25,18 +29,22 @@ body {
   grid-column: 1;
   z-index: 1;
   align-self: flex-end;
+  margin: 1rem;
+  width: 14rem;
 }
 
 nav {
   grid-column: 2;
   grid-row: 1;
   z-index: 1;
+  padding-right: 1rem;
 }
 
 nav ul {
-  font-family: Patua One;
+  font-family: "Patua One", sans-serif;
   list-style-type: none;
   display: flex;
+  justify-content: flex-end;
 }
 
 nav li {
@@ -45,6 +53,7 @@ nav li {
 
 nav a {
   color: #fff;
+  font-size: 2rem;
 }
 
 header {
@@ -55,11 +64,23 @@ main {
   display: contents;
 }
 
+figure {
+  margin: 0;
+}
+
+figure:nth-child(1) {
+  grid-area: figure1;
+}
+
+figure:nth-child(2) {
+  grid-area: figure2;
+}
+
 img {
   width: 100%;
 }
 
-header {
-  /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
-  display: contents;
+h2 {
+  margin: 0;
+  font-family: "Patua One", sans-serif;
 }
